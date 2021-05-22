@@ -28,7 +28,7 @@ public class Impulse : MonoBehaviour
     {
         InitialPos = transform.position;
       
-        if (Input.GetMouseButtonDown(0) && ndeimpulsos > 0)
+        if (Input.GetMouseButtonDown(0) && (ndeimpulsos > 0) && Pause.isPaused == false)
         {
             MouseToWorldPosition();
             ndeimpulsos--;
