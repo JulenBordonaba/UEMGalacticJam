@@ -430,11 +430,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1423859752}
-  - component: {fileID: 1423859751}
-  - component: {fileID: 1423859750}
   - component: {fileID: 1423859749}
   - component: {fileID: 1423859748}
   - component: {fileID: 1423859747}
+  - component: {fileID: 1423859753}
+  - component: {fileID: 1423859750}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -454,6 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0963a11b7033a409742a554a0cfd5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 1423859753}
   centersInArea: []
 --- !u!54 &1423859748
 Rigidbody:
@@ -484,8 +485,8 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1423859750
-MeshRenderer:
+--- !u!137 &1423859750
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -498,7 +499,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
+  m_RayTracingMode: 3
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -524,15 +525,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1423859751
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423859746}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 1
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4711208715938537054, guid: a171272d5a4def04ba9a6c835156f89e, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights:
+  - 0
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: -0.0000000018626451, y: 0, z: 0}
+    m_Extent: {x: 0.023765301, y: 0.0341467, z: 0.023320584}
+  m_DirtyAABB: 0
 --- !u!4 &1423859752
 Transform:
   m_ObjectHideFlags: 0
@@ -547,6 +552,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423859753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423859746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f10913eb8f58c469b6ca67a098a213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMesh: {fileID: 1423859750}
+  changeVelocity: 10
+  atractionForce: 0
 --- !u!1 &1522783759
 GameObject:
   m_ObjectHideFlags: 0

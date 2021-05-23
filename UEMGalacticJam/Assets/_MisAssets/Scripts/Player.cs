@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    private PlayerHead head;
+    [SerializeField]
     private List<GravityCenter> centersInArea;
     private Rigidbody rb;
 
@@ -23,8 +25,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print(AtractionForce);
-        rb.AddForce(AtractionForce);
+        //print(AtractionForce);
+        rb.AddForce(AtractionForce*(head.atractionForce/50f));
     }
 
     private Vector3 AtractionForce
