@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Loads : MonoBehaviour
 {
+
     public void quit()
     {
         Application.Quit();
