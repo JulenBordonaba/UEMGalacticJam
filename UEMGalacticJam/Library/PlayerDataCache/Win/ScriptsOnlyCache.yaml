@@ -1,9 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GravityCenter
     - Impulse
     - Loads
     - Pause
+    - Player
+    - PlayerHead
+    - Rotate
     - Victoria
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -18,7 +22,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
+    - UnityEngine.UI.RawImage
   sceneClasses:
     Assets/Scenes/Fin del Juego.unity:
     - Class: 1
@@ -35,6 +39,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -42,24 +50,20 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2210}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2630}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3034}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 3488}
-    - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3544}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -100,45 +104,55 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 83
       Script: {instanceID: 0}
-    - Class: 96
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1600}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 2058}
+      Script: {instanceID: 2062}
     - Class: 114
-      Script: {instanceID: 2210}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2630}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 3034}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 16406}
+      Script: {instanceID: 3362}
+    - Class: 114
+      Script: {instanceID: 3498}
+    - Class: 114
+      Script: {instanceID: 3544}
+    - Class: 114
+      Script: {instanceID: 3558}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -170,24 +184,22 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2210}
+      Script: {instanceID: 2372}
     - Class: 114
-      Script: {instanceID: 2630}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3034}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3488}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3544}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -402,10 +414,22 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 6368bb08f2bba65b972cdadccdf5a22f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GravityCenter
+  - hash:
+      serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 6c22a06ad19ac150cbe2ef9f54ad631e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHead
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -520,6 +544,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Victoria
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -648,19 +678,19 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 52d7a8b653c16d51c68adf48deb27d06
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Victoria
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu Principal.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Fin del Juego.unity
-  playerPath: C:/Users/user/Documents/GitHub/UEMGalacticJam/UEMGalacticJam/UEMGalacticJam.exe
+  playerPath: C:/Users/user/Documents/GitHub/UEMGalacticJam/Build/UEMGalacticJam.exe

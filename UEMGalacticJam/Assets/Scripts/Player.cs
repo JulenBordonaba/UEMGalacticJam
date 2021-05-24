@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         //print(AtractionForce);
-        rb.AddForce(AtractionForce*(head.atractionForce/50f));
+        rb.AddForce(AtractionForce*(head.atractionForce/13f));
     }
 
     private Vector3 AtractionForce
